@@ -1,7 +1,7 @@
 # Pin npm packages by running ./bin/importmap
 
 pin "application", preload: true
-pin "@hotwired/turbo-rails", to: "turbo.min.js", preload: true
-pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
-pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
-pin_all_from "app/javascript/controllers", under: "controllers"
+pin "react" # @18.2.0
+
+pin "react" # https://ga.jspm.io/npm:react@17.0.2/index.js
+pin "object-assign" # https://ga.jspm.io/npm:object-assign@4.1.1/index.js
