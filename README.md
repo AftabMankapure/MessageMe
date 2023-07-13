@@ -24,6 +24,4 @@ Things you may want to cover:
 
 * ...
 =======
-# MessageMe
-MessageMe
->>>>>>> d56cda469468b0b2805a228dee31249188adfce7
+
