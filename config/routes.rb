@@ -12,5 +12,8 @@ Rails.application.routes.draw do
 
   post "/message", to: "messages#create"
 
+  get '/users', to: 'users#index'
+
+
   mount ActionCable.server, at: '/cabel'
 end

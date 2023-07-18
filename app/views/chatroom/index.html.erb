@@ -4,7 +4,6 @@
 </h4>
 
 <div class="ui two column grid">
-  <!-- feed -->
   <div class="twelve wide column">
     <div class="ui fluid card chatbox">
       <div class="content" id="messages">
@@ -29,9 +28,9 @@
     <div class="ui fluid card chatbox">
       <div class="content">
         <div class="ui inverted vertical menu">
-          <a href="" class="item">Home</a>
-          <a href="" class="item">Messages</a>
-          <a href="" class="item">Friends</a>
+          <%= link_to "Home" ,root_path ,class: "item" %>
+          <%= link_to "Messages" ,root_path ,class: "item" %>
+          <%= link_to "Friends" ,users_path ,class: "item" %>
         </div>
       </div>
     </div>
