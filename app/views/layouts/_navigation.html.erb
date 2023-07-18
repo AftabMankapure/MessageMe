@@ -1,23 +1,26 @@
-<div class="ui inverted large menu">
-    <div class="ui container">
-      <%= link_to "Chatroom" ,root_path,class: "item" %>
-      <%= link_to "Messages" ,root_path,class: "item" %>
-      <div class="right menu">
-        <div class="ui dropdown item">
-          Account <i class="dropdown icon"></i>
-          <div class="menu">
-            <% if logged_in? %>
-                  <%= link_to "Loggout" , logout_path ,method: :delete, class: "item"%>
-                  <% else %>
-                  <%= link_to "Login" , login_path ,class: "item"%>
-            <% end %>
-          </div>
-        </div>
-          <% if !logged_in? %>
-            <div class="item">
-                <%= link_to "Log in", login_path, class: "ui primary button" %>
-            </div>
-          <% end %>
+<div class="ui small inverted menu">
+  <%= link_to "Chatroon", root_path, class: "item" %>
+  <a class="item">
+    Messages
+  </a>
+  <div class="right menu">
+    <div class="ui dropdown item">
+      Account <i class="dropdown icon"></i>
+      <div class="menu">
+        <% if logged_in?%>
+          <%= link_to "Logout", logout_path, data: { turbo_method: :delete }, class: "item" %>
+        <% else %>
+          <%= link_to "Login", login_path, class: "item" %>
+          <%= link_to "Signup", signup_path, class: "item" %>
+        <% end %>
       </div>
     </div>
+    <div class="item">
+      <% if logged_in?%>
+        <%= link_to "Logout", logout_path, data: { turbo_method: :delete }, class: "ui red button" %>
+      <% else %>
+        <%= link_to "Signup", signup_path, class: "ui primary button" %>
+      <% end %>
+    </div>
+  </div>
 </div>

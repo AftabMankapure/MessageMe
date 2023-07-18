@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
-  root 'chatroom#index'
-  get 'chatroom/index'
-  get 'login', to: 'session#new'
-  post 'login', to: 'session#create'
-  delete 'logout', to: 'sessions#destroy'
-  get 'logout', to: 'session#destroy'
-  post 'message', to: 'messages#create'
+  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  mount ActionCable.server, at: '/cable'
+  # Defines the root path route ("/")
+  root "chatroom#index"
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  delete "/logout", to: "sessions#destroy"
+
+  get "/signup", to: "users#new"
+  post "/signup", to: "users#create"
+
+  post "/message", to: "messages#create"
+
+  mount ActionCable.server, at: '/cabel'
 end
